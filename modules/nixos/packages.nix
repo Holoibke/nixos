@@ -29,6 +29,8 @@
     hyprlock
     hyprshot
     nodejs
+    python314
+    python314Packages.pip
 
     # Theme
     bibata-cursors
@@ -73,6 +75,20 @@
         icu
         libxcrypt-legacy
         zlib
+
+        libuuid
+        libglvnd
+        readline
+        stdenv.cc.cc.lib
+        libxkbcommon
+        zstd
+        krb5
+        brotli
+        fontconfig
+        xorg.libX11
+        glib
+        freetype
+        dbus
       ];
     };
   };
