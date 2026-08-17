@@ -1,11 +1,14 @@
 { ... }:
 
+let
+  gitPrivate = import ./git-private.nix;
+in
 {
   programs.git = {
     enable = true;
     settings.user = {
-      name = "Holoibke";
-      email = "azwijaczkozica@gmail.com";
+      name = "gitPrivate.name";
+      email = "gitPrivate.email";
     };
   };
 }

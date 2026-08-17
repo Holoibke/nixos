@@ -16,7 +16,7 @@
     mc
     yazi
 
-    # Wayland utilities
+    # Utilities
     wl-clipboard
     wlr-randr
     grim
@@ -28,6 +28,7 @@
     hypridle
     hyprlock
     hyprshot
+    nodejs
 
     # Theme
     bibata-cursors
