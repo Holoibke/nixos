@@ -1,0 +1,12 @@
+{ ... }:
+
+{
+  programs.kitty = {
+    enable = true;
+    settings = {
+      background_opacity = "0.6";
+      cursor_trail = "1";
+      window_padding_width = "25";
+    };
+  };
+}
