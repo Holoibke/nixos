@@ -12,7 +12,7 @@
   "display": {
     "separator": "",
     "constants": [
-      "\u001b[90m│                                                            │\u001b[60D\u001b[39m"
+      "\u001b[90m│                                                           │\u001b[60D\u001b[39m"
     ]
   },
   "modules": [
@@ -23,7 +23,7 @@
       "format": "{#90}╭ Values ────────────────────────────────────────────────────╮"
     },
 
-    // GROUP 1 — Identity
+    // GROUP 1 - Identity
     {
       "type": "title",
       "key": "{#90}│ {#92}User        {#90}│",
@@ -42,7 +42,7 @@
       "format": "{$1}"
     },
 
-    // GROUP 2 — System
+    // GROUP 2 - System
     {
       "type": "title",
       "key": "{#90}│ {#93}Host        {#90}│",
@@ -76,7 +76,7 @@
       "format": "{$1}"
     },
 
-    // GROUP 3 — Hardware
+    // GROUP 3 - Hardware
     {
       "type": "cpu",
       "key": "{#90}│ {#91}CPU         {#90}│",
@@ -109,7 +109,7 @@
       "format": "{$1}"
     },
 
-    // GROUP 4 — Terminal, Shell, Font & Network
+    // GROUP 4 - Terminal, Shell, Font & Network
     {
       "type": "terminal",
       "key": "{#90}│ {#95}Terminal    {#90}│",
