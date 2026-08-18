@@ -45,6 +45,12 @@
       set -gx XCURSOR_SIZE 24
       set -gx XCURSOR_THEME Bibata-Modern-Ice
     '';
+
+    interactiveShellInit = ''
+      if status is-interactive
+        fastfetch
+      end
+    '';
   };
 
   home.packages = with pkgs; [

@@ -9,7 +9,7 @@
     ./programs/git.nix
     ./programs/textfox.nix
     ./programs/cursor-theme.nix
-
+    ../configs/fastfetch
     ../configs/hyprland
     ../configs/fish
     ../configs/dolphin
