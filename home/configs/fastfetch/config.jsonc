@@ -12,7 +12,7 @@
   "display": {
     "separator": "",
     "constants": [
-      "\u001b[90m│                                                           │\u001b[60D\u001b[39m"
+      "\u001b[90m│                                                            │\u001b[60D\u001b[39m"
     ]
   },
   "modules": [
@@ -38,7 +38,7 @@
     // SEPARATOR
     {
       "type": "custom",
-      "key": "{#90}│              │",
+      "key": "{#90}│             │",
       "format": "{$1}"
     },
 
