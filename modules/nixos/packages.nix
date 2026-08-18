@@ -29,8 +29,6 @@
     hyprlock
     hyprshot
     nodejs
-    python314
-    python314Packages.pip
 
     # Theme
     bibata-cursors

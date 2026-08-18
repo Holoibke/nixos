@@ -30,6 +30,5 @@
     equibop
     lmstudio
     onlyoffice-desktopeditors
-    gemini-cli
   ];
 }

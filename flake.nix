@@ -22,6 +22,8 @@
 
     textfox.url = "github:adriankarlen/textfox";
 
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
+
     creamlinux-installer = {
       type = "github";
       owner = "Novattz";
@@ -37,8 +39,8 @@
       hostname = "Mieszko-II-Lambert";
 
       pkgs = import nixpkgs {
-	inherit system;
-	config.allowUnfree = true;
+	      inherit system;
+	      config.allowUnfree = true;
       };
 
     in {

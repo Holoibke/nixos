@@ -22,6 +22,7 @@
     ../../modules/nixos/nix-ld.nix
     ../../modules/nixos/packages.nix
     ../../modules/home-manager
+    ../../modules/nixos/affinity.nix
   ];
 
   networking.hostName = "Mieszko-II-Lambert";
