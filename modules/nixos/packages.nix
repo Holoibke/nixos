@@ -63,6 +63,7 @@
     noto-fonts-color-emoji
     jetbrains-mono
     font-awesome
+    nert-fonts.iosevka
   ];
 
   programs.appimage = {
