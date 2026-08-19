@@ -24,6 +24,7 @@
     ../../modules/nixos/affinity.nix
     ../../modules/nixos/racing-wheel.nix
     ../../modules/nixos/docker.nix
+    ../../modules/nixos/searxng.nix
     ../../modules/home-manager
   ];
 
