@@ -74,7 +74,7 @@
         icu
         libxcrypt-legacy
         zlib
-
+        glibc
         libuuid
         libglvnd
         readline

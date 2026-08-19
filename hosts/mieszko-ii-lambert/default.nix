@@ -21,9 +21,10 @@
     ../../modules/nixos/gaming.nix
     ../../modules/nixos/nix-ld.nix
     ../../modules/nixos/packages.nix
-    ../../modules/home-manager
     ../../modules/nixos/affinity.nix
     ../../modules/nixos/racing-wheel.nix
+    ../../modules/nixos/docker.nix
+    ../../modules/home-manager
   ];
 
   networking.hostName = "Mieszko-II-Lambert";

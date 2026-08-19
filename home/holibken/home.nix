@@ -3,14 +3,14 @@
 {
   imports = [
     inputs.noctalia.homeModules.default
-
+    # programs
     ./programs/noctalia.nix
     ./programs/kitty.nix
     ./programs/git.nix
     ./programs/textfox.nix
     ./programs/cursor-theme.nix
     ./programs/vscodium.nix
-
+    #configs
     ../configs/fastfetch
     ../configs/hyprland
     ../configs/fish
@@ -33,5 +33,7 @@
     lmstudio
     onlyoffice-desktopeditors
     vscodium
+    thunderbird
+    r2modman
   ];
 }
