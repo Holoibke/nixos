@@ -3,7 +3,7 @@
   "logo": {
     "type": "kitty",
     "source": "/home/holibken/Pictures/mylogo.png",
-    "height": 30,
+    "height": 26,
     "padding": {
       "top": 2,
       "right": 2
