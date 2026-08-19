@@ -13,7 +13,10 @@
         enabled = true;
         default.path = "/home/${username}/Pictures/Wallpapers/default.jpg";
       };
-      shell.greeter_sync.auto_sync = true;
+      shell = {
+        font_family = "Iosevka Nerd Font Mono";
+        greeter_sync.auto_sync = true;
+      };
     };
   };
 }
