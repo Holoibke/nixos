@@ -15,15 +15,15 @@
 
     environment = {
       SEARXNG_BASE_URL = "http://localhost:8080/";
-      INSTANCE_NAME = "holibken-searxng";
+      INSTANCE_NAME = "searxng";
     };
 
-    # extraOptions = [
-    #   "--cap-drop=ALL"
-    #   "--cap-add=CHOWN"
-    #   "--cap-add=SETGID"
-    #   "--cap-add=SETUID"
-    #   "--cap-add=DAC_OVERRIDE"
-    # ];
+    extraOptions = [
+      "--cap-drop=ALL"
+      "--cap-add=CHOWN"
+      "--cap-add=SETGID"
+      "--cap-add=SETUID"
+      "--cap-add=DAC_OVERRIDE"
+    ];
   };
 }
