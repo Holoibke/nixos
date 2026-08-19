@@ -9,6 +9,8 @@
     ./programs/git.nix
     ./programs/textfox.nix
     ./programs/cursor-theme.nix
+    ./programs/vscodium.nix
+
     ../configs/fastfetch
     ../configs/hyprland
     ../configs/fish
@@ -30,5 +32,6 @@
     equibop
     lmstudio
     onlyoffice-desktopeditors
+    vscodium
   ];
 }
