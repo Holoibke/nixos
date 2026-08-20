@@ -19,7 +19,7 @@ in
     type = SimplePOP3SSLRetriever
     server = disroot.org
     port = 995
-    username = ${private.username}
+    # username = ${private.username}
     password_command = ("cat", "/home/holibken/.config/getmail/disroot.pass")
 
     [destination]
