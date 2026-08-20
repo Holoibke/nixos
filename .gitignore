@@ -1,3 +1,1 @@
-git-private.nix
-mail-private.nix
-hosts/mieszko-ii-lambert/hardware-configuration.nix
+chosts/mieszko-ii-lambert/hardware-configuration.nix

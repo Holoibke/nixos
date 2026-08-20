@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  private = import ../../../mail-private.nix;
+  private = import /home/holibken/.config/credentials/mail;
 in
 {
   home.packages = [ pkgs.getmail6 ];

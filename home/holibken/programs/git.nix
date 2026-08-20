@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  gitPrivate = import ../../../git-private.nix;
+  gitPrivate = import /home/holibken/.config/credentials/git;
 in
 {
   programs.git = {
