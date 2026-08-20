@@ -27,10 +27,7 @@ in
     path = ~/Mail/disroot/
 
     [options]
-    # Starting conservative: nothing gets deleted from the server until
-    # you've confirmed this actually works reliably. Flip delete to true
-    # once you trust it, if you want Disroot's own inbox to empty out as
-    # mail lands locally.
+    # flip delete to true once you trust it, if you want disroots own inbox to empty out as mail lands locally
     read_all = true
     delete = false
     verbose = 1
