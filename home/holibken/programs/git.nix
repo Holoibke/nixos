@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  gitPrivate = import ./git-private.nix;
+  gitPrivate = import ../../../git-private.nix;
 in
 {
   programs.git = {
