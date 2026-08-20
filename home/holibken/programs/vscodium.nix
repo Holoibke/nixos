@@ -9,6 +9,7 @@
       "editor.fontFamily" = "'Iosevka Nerd Font Mono', monospace";
       "editor.fontLigatures" = true;
       "terminal.integrated.fontFamily" = "'Iosevka Nerd Font Mono', monospace";
+      "git.enableSmartCommit" = true;
     };
   };
 }

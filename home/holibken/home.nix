@@ -10,6 +10,8 @@
     ./programs/textfox.nix
     ./programs/cursor-theme.nix
     ./programs/vscodium.nix
+    ./programs/thunderbird.nix
+    ./programs/getmail.nix
     #configs
     ../configs/fastfetch
     ../configs/hyprland
