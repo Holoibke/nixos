@@ -37,5 +37,6 @@
     vscodium
     thunderbird
     r2modman
+    getmail6
   ];
 }
