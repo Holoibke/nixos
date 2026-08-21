@@ -6,8 +6,10 @@ in
 {
   home.packages = [ pkgs.getmail6 ];
 
-  systemd.user.tmpfiles.rules = [ "d %h/Mail 0700 - - - -" ];
-
+  systemd.user.tmpfiles.rules = [
+    "d %h/Mail 0700 - - - -"
+    "d %h/.getmail 0700 - - - -"
+  ];
   xdg.configFile."getmail/getmailrc".text = ''
     [retriever]
     type = SimplePOP3SSLRetriever
