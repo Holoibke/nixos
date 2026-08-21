@@ -8,7 +8,7 @@ in
     enable = true;
     settings.user = {
       name = gitPrivate.name;
-      email = gitPrivate.email;
+      email = gitPrivate.mail;
     };
   };
 }
