@@ -13,8 +13,8 @@ in
     type = SimplePOP3SSLRetriever
     server = disroot.org
     port = 995
-    # username = ${mailPrivate.username}
-    password_command = ("cat", "/home/holibken/.config/getmail/disroot.pass")
+    username = ${mailPrivate.username}
+    password_command = ${mailPrivate.password}
 
     [destination]
     type = Maildir
