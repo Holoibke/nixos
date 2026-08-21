@@ -29,6 +29,7 @@
     hyprlock
     hyprshot
     nodejs
+    mpd
 
     # Theme
     bibata-cursors
@@ -64,6 +65,9 @@
     jetbrains-mono
     font-awesome
     nerd-fonts.iosevka
+    corefonts
+    merriweather
+    roboto
   ];
 
   programs.appimage = {
