@@ -1,25 +1,19 @@
 { pkgs, ... }:
 
 let
-  private = import /home/holibken/.config/credentials/mail;
+  mailPrivate = import /home/holibken/.config/credentials/mail;
 in
 {
   home.packages = [ pkgs.getmail6 ];
 
   systemd.user.tmpfiles.rules = [ "d %h/Mail 0700 - - - -" ];
 
-  #   one time setup after rebuilding:
-  #
-  #   mkdir -p ~/.config/getmail
-  #   chmod 700 ~/.config/getmail
-  #   echo -n 'your-disroot-password' > ~/.config/getmail/disroot.pass
-  #   chmod 600 ~/.config/getmail/disroot.pass
   xdg.configFile."getmail/getmailrc".text = ''
     [retriever]
     type = SimplePOP3SSLRetriever
     server = disroot.org
     port = 995
-    # username = ${private.username}
+    # username = ${mailPrivate.username}
     password_command = ("cat", "/home/holibken/.config/getmail/disroot.pass")
 
     [destination]
