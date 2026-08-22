@@ -11,6 +11,8 @@
       "terminal.integrated.fontFamily" = "'Iosevka Nerd Font Mono', monospace";
       "git.enableSmartCommit" = true;
       "git.confirmSync" = false;
+      "explorer.confirmDelete" = false;
+
     };
   };
 }
