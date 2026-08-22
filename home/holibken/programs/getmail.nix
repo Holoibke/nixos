@@ -16,7 +16,7 @@ in
     server = disroot.org
     port = 995
     username = ${mailPrivate.username}
-    password_command = ${mailPrivate.password}
+    password_command = password_command = ("${extractMailPassword}", "/home/holibken/.config/credentials/mail")
 
     [destination]
     type = Maildir
