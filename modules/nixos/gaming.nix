@@ -17,5 +17,6 @@
     gamescope
     wineWow64Packages.stable
     (import inputs.creamlinux-installer { inherit pkgs; })
+    dotnetCorePackages.runtime_10_0-bin
   ];
 }
