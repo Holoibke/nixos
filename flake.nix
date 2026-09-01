@@ -24,6 +24,8 @@
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
 
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+
     creamlinux-installer = {
       type = "github";
       owner = "Novattz";

@@ -38,5 +38,7 @@
     r2modman
     getmail6
     rmpc
+    mpd
+    qgis
   ];
 }
