@@ -3,7 +3,6 @@
 {
  systemd.tmpfiles.rules = [
     "d /var/lib/searxng 0750 root root -"
-    "d /var/lib/searxng-theme 0750 root root -"
   ];
 
   virtualisation.oci-containers.containers.searxng = {
@@ -13,8 +12,7 @@
     ports = [ "127.0.0.1:8080:8080" ];
 
     volumes = [ 
-      "/var/lib/searxng:/etc/searxng:rw" 
-      "/var/lib/searxng-theme/sxng-ltr.min.css:/usr/local/searxng/searx/static/themes/simple/css/sxng-ltr.min.css:ro"
+      "/var/lib/searxng:/etc/searxng:rw"  
     ];
 
     environment = {
