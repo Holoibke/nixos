@@ -14,7 +14,7 @@
 
     volumes = [ 
       "/var/lib/searxng:/etc/searxng:rw" 
-      "/var/lib/searxng-theme/searxng-ltr.min.css:/usr/local/searxng/searx/static/themes/simple/css/searxng-ltr.min.css:ro"
+      "/var/lib/searxng-theme/searxng-ltr.min.css:/usr/local/searxng/searx/static/themes/simple/css/sxng-ltr.min.css:ro"
     ];
 
     environment = {
