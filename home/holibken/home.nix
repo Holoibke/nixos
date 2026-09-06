@@ -39,6 +39,5 @@
     getmail6
     rmpc
     mpd
-    qgis
   ];
 }
