@@ -26,9 +26,8 @@ in
     "d ${themeDir} 0755 root root -"
   ];
 
-  # serve a new stylesheet).
   systemd.services.searxng-theme-render = {
-    description = "pywal render from palette";
+    description = "Render SearXNG theme from the pywal palette";
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${renderTheme}/bin/searxng-render-theme ${walColorsFile} ${themeSkeleton} ${themeDir} ${pkgs.brotli}/bin/brotli ${pkgs.systemd}/bin/systemctl docker-searxng.service";

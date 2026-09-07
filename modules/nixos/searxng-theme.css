@@ -27,7 +27,6 @@ html:has(main#main_stats) {
 
   --tf-logo: "   _____                 _  ___  ________\A  / ___/___  ____ ______| |/ / |/ / ____/\A  \\__ \\/ _ \\/ __ `/ ___/|   /|   / / __  \A ___/ /  __/ /_/ / /   /   |/   / /_/ /  \A/____/\\___/\\__,_/_/   /_/|_/_/|_\\____/   ";
 
-
   --tf-bg: var(--pywalfox-background, {{background}});
   --tf-bg-alt: var(--pywalfox-background-light, color-mix(in srgb, {{foreground}} 6%, {{background}}));
   --tf-bg-extra: var(--pywalfox-background-extra, color-mix(in srgb, {{foreground}} 13%, {{background}}));

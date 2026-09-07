@@ -111,10 +111,19 @@ def main():
         input=css_bytes, stdout=subprocess.PIPE, check=True,
     )
     atomic_write(OUT_CSS + ".br", brotli.stdout)
-    subprocess.run(
-        [SYSTEMCTL, "try-restart", CONTAINER_UNIT], check=False
-    )
-    print("searxng-theme: rendered theme from {}".format(WAL_FILE))
+
+    active = subprocess.run(
+        [SYSTEMCTL, "is-active", "--quiet", CONTAINER_UNIT],
+        check=False,
+    ).returncode == 0
+    if active:
+        subprocess.run(
+            [SYSTEMCTL, "--no-block", "try-restart", CONTAINER_UNIT],
+            check=False,
+        )
+        print("searxng-theme: restart queued")
+    else:
+        print("searxng-theme: container not active, no restart")
 
 
 if __name__ == "__main__":
