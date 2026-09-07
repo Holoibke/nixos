@@ -1,33 +1,49 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, username, ... }:
 
 let
-
   stockCss = "${inputs.searxng}/searx/static/themes/simple/sxng-ltr.min.css";
 
-  themeCss = pkgs.runCommand "sxng-ltr.min.css" { } ''
-    cat ${stockCss} > $out
-    printf '\n' >> $out
-    cat ${./searxng-theme.css} >> $out
-  '';
+  themeSkeleton = pkgs.runCommand "sxng-ltr.min.css.template" { }
+    ''
+      cat ${stockCss} > $out
+      printf '\n' >> $out
+      cat ${./searxng-theme.css} >> $out
+    '';
 
-  themeCssGz = pkgs.runCommand "sxng-ltr.min.css.gz" {
-    nativeBuildInputs = [ pkgs.gzip ];
-  } ''
-    gzip -9 -n -c ${themeCss} > $out
-  '';
+  renderTheme = pkgs.writers.writePython3Bin "searxng-render-theme" { }
+    (builtins.readFile ./searxng-render-theme.py);
 
-  themeCssBr = pkgs.runCommand "sxng-ltr.min.css.br" {
-    nativeBuildInputs = [ pkgs.brotli ];
-  } ''
-    brotli -q 11 -c ${themeCss} > $out
-  '';
+  walDir = "/home/${username}/.cache/wal";
+  walColorsFile = "${walDir}/colors.json";
 
+  themeDir = "/var/lib/searxng-theme";
+  themeCss = "${themeDir}/sxng-ltr.min.css";
   themeCssTarget = "/usr/local/searxng/searx/static/themes/simple/sxng-ltr.min.css";
 in
 {
   systemd.tmpfiles.rules = [
     "d /var/lib/searxng 0750 root root -"
+    "d ${themeDir} 0755 root root -"
   ];
+
+  # serve a new stylesheet).
+  systemd.services.searxng-theme-render = {
+    description = "pywal render from palette";
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${renderTheme}/bin/searxng-render-theme ${walColorsFile} ${themeSkeleton} ${themeDir} ${pkgs.brotli}/bin/brotli ${pkgs.systemd}/bin/systemctl docker-searxng.service";
+    };
+  };
+
+  systemd.paths.searxng-theme-render = {
+    description = "Watch the pywal palette for changes";
+    wantedBy = [ "multi-user.target" ];
+    pathConfig = {
+      PathModified = walColorsFile;
+      PathChanged = walDir;
+      Unit = "searxng-theme-render.service";
+    };
+  };
 
   virtualisation.oci-containers.containers.searxng = {
     image = "docker.io/searxng/searxng:latest";
@@ -38,8 +54,8 @@ in
     volumes = [
       "/var/lib/searxng:/etc/searxng:rw"
       "${themeCss}:${themeCssTarget}:ro"
-      "${themeCssGz}:${themeCssTarget}.gz:ro"
-      "${themeCssBr}:${themeCssTarget}.br:ro"
+      "${themeCss}.gz:${themeCssTarget}.gz:ro"
+      "${themeCss}.br:${themeCssTarget}.br:ro"
     ];
 
     environment = {
@@ -54,5 +70,10 @@ in
       "--cap-add=SETUID"
       "--cap-add=DAC_OVERRIDE"
     ];
+  };
+
+  systemd.services.docker-searxng = {
+    wants = [ "searxng-theme-render.service" ];
+    after = [ "searxng-theme-render.service" ];
   };
 }

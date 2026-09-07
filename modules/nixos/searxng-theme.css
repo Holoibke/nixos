@@ -27,39 +27,20 @@ html:has(main#main_stats) {
 
   --tf-logo: "   _____                 _  ___  ________\A  / ___/___  ____ ______| |/ / |/ / ____/\A  \\__ \\/ _ \\/ __ `/ ___/|   /|   / / __  \A ___/ /  __/ /_/ / /   /   |/   / /_/ /  \A/____/\\___/\\__,_/_/   /_/|_/_/|_\\____/   ";
 
-/* palette override
-  --background: #232136;
-  --foreground: #e0def4;
-  --color0:  #232136;
-  --color1:  #eb6f92;
-  --color2:  #3e8fb0;
-  --color3:  #f6c177;
-  --color4:  #9ccfd8;
-  --color5:  #c4a7e7;
-  --color6:  #ea9a97;
-  --color7:  #e0def4;
-  --color8:  #6e6a86;
-  --color9:  #eb6f92;
-  --color10: #3e8fb0;
-  --color11: #f6c177;
-  --color12: #9ccfd8;
-  --color13: #c4a7e7;
-  --color14: #ea9a97;
-  --color15: #e0def4;
-  */
-  --tf-bg: var(--pywalfox-background, var(--background, var(--color0, #232136)));
-  --tf-bg-alt: var(--pywalfox-background-light, var(--background-light, var(--color8, #2a273f)));
-  --tf-bg-extra: var(--pywalfox-background-extra, var(--background-extra, var(--color8, #393552)));
-  --tf-fg: var(--pywalfox-text, var(--text, var(--foreground, var(--color15, #e0def4))));
-  --tf-fg-focus: var(--pywalfox-text-focus, var(--text-focus, var(--color7, #e0def4)));
-  --tf-accent: var(--pywalfox-accent-primary, var(--accent-primary, var(--color4, var(--color12, #9ccfd8))));
-  --tf-accent-2: var(--pywalfox-accent-secondary, var(--accent-secondary, var(--color5, var(--color13, #c4a7e7))));
-  --tf-red: var(--color1, var(--color9, #eb6f92));
-  --tf-green: var(--color2, var(--color10, #3e8fb0));
-  --tf-yellow: var(--color3, var(--color11, #f6c177));
-  --tf-blue: var(--color4, var(--color12, #9ccfd8));
-  --tf-magenta: var(--color5, var(--color13, #c4a7e7));
-  --tf-cyan: var(--color6, var(--color14, #ea9a97));
+
+  --tf-bg: var(--pywalfox-background, {{background}});
+  --tf-bg-alt: var(--pywalfox-background-light, color-mix(in srgb, {{foreground}} 6%, {{background}}));
+  --tf-bg-extra: var(--pywalfox-background-extra, color-mix(in srgb, {{foreground}} 13%, {{background}}));
+  --tf-fg: var(--pywalfox-text, {{foreground}});
+  --tf-fg-focus: var(--pywalfox-text-focus, {{color7}});
+  --tf-accent: var(--pywalfox-accent-primary, {{color4}});
+  --tf-accent-2: var(--pywalfox-accent-secondary, {{color5}});
+  --tf-red: {{color1}};
+  --tf-green: {{color2}};
+  --tf-yellow: {{color3}};
+  --tf-blue: {{color4}};
+  --tf-magenta: {{color5}};
+  --tf-cyan: {{color6}};
 
   --tf-border: color-mix(in srgb, var(--tf-fg) 22%, var(--tf-bg));
   --tf-muted: color-mix(in srgb, var(--tf-fg) 52%, var(--tf-bg));
@@ -69,7 +50,7 @@ html:has(main#main_stats) {
   --tf-on-accent: var(--tf-bg);
 
   --color-base-font: var(--tf-fg) !important;
-  --color-base-font-rgb: 224, 222, 244 !important;
+  --color-base-font-rgb: {{foreground_rgb}} !important;
   --color-base-background: var(--tf-bg) !important;
   --color-base-background-mobile: var(--tf-bg) !important;
   --color-url-font: var(--tf-accent) !important;
