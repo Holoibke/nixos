@@ -595,6 +595,7 @@
         "nixpkgs": "nixpkgs_7",
         "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
+        "searxng": "searxng",
         "textfox": "textfox"
       }
     },
@@ -612,6 +613,23 @@
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "searxng": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788779887,
+        "narHash": "sha256-nGdteP9ZLPGAWRzAWs0MwNUzbJLakipsP2tJxMnDdqY=",
+        "owner": "searxng",
+        "repo": "searxng",
+        "rev": "3e454637fb9829756c805dd9c02100f0bc9520fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "searxng",
+        "repo": "searxng",
+        "rev": "3e454637fb9829756c805dd9c02100f0bc9520fd",
         "type": "github"
       }
     },

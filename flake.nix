@@ -17,6 +17,11 @@
     };
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    
+    searxng = {
+      url = "github:searxng/searxng/3e454637fb9829756c805dd9c02100f0bc9520fd";
+      flake = false;
+    };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 

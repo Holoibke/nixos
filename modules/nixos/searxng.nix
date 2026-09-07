@@ -1,7 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
-  themeCss = ./searxng-theme.css;
+
+  stockCss = "${inputs.searxng}/searx/static/themes/simple/sxng-ltr.min.css";
+
+  themeCss = pkgs.runCommand "sxng-ltr.min.css" { } ''
+    cat ${stockCss} > $out
+    printf '\n' >> $out
+    cat ${./searxng-theme.css} >> $out
+  '';
 
   themeCssGz = pkgs.runCommand "sxng-ltr.min.css.gz" {
     nativeBuildInputs = [ pkgs.gzip ];
