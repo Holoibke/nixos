@@ -1,7 +1,24 @@
-{ ... }:
+{ config, pkgs, ... }:
 
+let
+  themeCss = ./searxng-theme.css;
+
+  themeCssGz = pkgs.runCommand "sxng-ltr.min.css.gz" {
+    nativeBuildInputs = [ pkgs.gzip ];
+  } ''
+    gzip -9 -n -c ${themeCss} > $out
+  '';
+
+  themeCssBr = pkgs.runCommand "sxng-ltr.min.css.br" {
+    nativeBuildInputs = [ pkgs.brotli ];
+  } ''
+    brotli -q 11 -c ${themeCss} > $out
+  '';
+
+  themeCssTarget = "/usr/local/searxng/searx/static/themes/simple/sxng-ltr.min.css";
+in
 {
- systemd.tmpfiles.rules = [
+  systemd.tmpfiles.rules = [
     "d /var/lib/searxng 0750 root root -"
   ];
 
@@ -11,8 +28,11 @@
 
     ports = [ "127.0.0.1:8080:8080" ];
 
-    volumes = [ 
-      "/var/lib/searxng:/etc/searxng:rw"  
+    volumes = [
+      "/var/lib/searxng:/etc/searxng:rw"
+      "${themeCss}:${themeCssTarget}:ro"
+      "${themeCssGz}:${themeCssTarget}.gz:ro"
+      "${themeCssBr}:${themeCssTarget}.br:ro"
     ];
 
     environment = {
