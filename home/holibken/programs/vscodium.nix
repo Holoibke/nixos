@@ -12,7 +12,7 @@
       "git.enableSmartCommit" = true;
       "git.confirmSync" = false;
       "explorer.confirmDelete" = false;
-      "explorer.confirmDragAndDrop": false
+      "explorer.confirmDragAndDrop" =  false;
     };
   };
 }
