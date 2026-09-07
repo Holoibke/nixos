@@ -39,5 +39,6 @@
     getmail6
     rmpc
     mpd
+    mailspring
   ];
 }
