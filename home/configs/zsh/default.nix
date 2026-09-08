@@ -99,7 +99,7 @@
     settings = {
       add_newline = true;
       command_timeout = 500;
-      # keep the prompt small: defaults are already fasttrim the noise
+      # keep the prompt small defaults are already fasttrim the noise
       line_break.disabled = false;
     };
   };
