@@ -8,6 +8,6 @@ hl.workspace_rule({ workspace = "6", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "7", monitor = "DP-1", persistent = true })
 
 -- HDMI-A-1
-hl.workspace_rule({ workspace = "8",  monitor = "HDMI-A-1", persistent = true, default = true })
-hl.workspace_rule({ workspace = "9",  monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "10", monitor = "HDMI-A-1", persistent = true })
+hl.workspace_rule({ workspace = "8",  monitor = "DP-2", persistent = true, default = true })
+hl.workspace_rule({ workspace = "9",  monitor = "DP-2", persistent = true })
+hl.workspace_rule({ workspace = "10", monitor = "DP-2", persistent = true })
