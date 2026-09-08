@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 
 {
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -14,7 +14,7 @@
       "input"
       "gamemode"
     ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     initialPassword = "changeme"; # run `passwd` after first login
   };
 }

@@ -14,7 +14,7 @@
     #configs
     ../configs/fastfetch
     ../configs/hyprland
-    ../configs/fish
+    ../configs/zsh
     ../configs/dolphin
   ];
 
