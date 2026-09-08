@@ -15,6 +15,7 @@
     unrar
     mc
     yazi
+    _7zz
 
     # Utilities
     wl-clipboard
