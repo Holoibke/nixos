@@ -22,6 +22,7 @@
 
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake /etc/nixos#Mieszko-II-Lambert --impure";
+      nrf = "sudo nixos-rebuild switch --flake path:/etc/nixos#Mieszko-II-Lambert --impure";
       nrb = "sudo nixos-rebuild build --flake /etc/nixos#Mieszko-II-Lambert --impure";
       ncg = "nix-collect-garbage -d";
       nsp = "nix-shell -p";
