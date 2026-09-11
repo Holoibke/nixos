@@ -10,6 +10,37 @@ hl.window_rule({
 })
 
 -- Gaming
+hl.window_rule({
+    name    = "game-content-type",
+    match   = { class = GAME_CLASSES },
+    content = "game",
+})
+
+hl.window_rule({
+    name         = "game-opaque-noblur",
+    match        = { class = GAME_CLASSES },
+    opacity      = "1.0 override",
+    no_blur      = true,
+    no_dim       = true,
+    no_shadow    = true,
+    no_anim      = true,
+    idle_inhibit = "always",
+})
+
+hl.window_rule({
+    name         = "game-keep-focus",
+    match        = { class = STEAM_CLASSES },
+    stay_focused = true,
+})
+
+
+hl.window_rule({
+    name             = "gamescope",
+    match            = { class = "^(gamescope)$" },
+    no_initial_focus = true,
+    immediate        = true,
+    sync_fullscreen  = true,
+})
 -- local gamingApps = "^(steam_app.*|gamescope)$"
 -- local gamingWorkspace = "name:gaming"
 
@@ -43,6 +74,7 @@ hl.window_rule({
 -- })
 
 -- Apps
+hl.window_rule({ match = { class = "^(.+\\.exe)$", float = true }, monitor = PRIMARY_MONITOR, center = true })
 hl.window_rule({ match = { class = "^(.+\\.exe)$", float = true }, monitor = PRIMARY_MONITOR, center = true, fullscreen_state = 0 })
 hl.window_rule({ match = { class = "^(.+[Ll]auncher.*)$" }, float = true, monitor = PRIMARY_MONITOR })
 hl.window_rule({ match = { class = "^(vesktop|discord)$" }, monitor = PRIMARY_MONITOR })
