@@ -88,6 +88,10 @@
     zoxide
   ];
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
