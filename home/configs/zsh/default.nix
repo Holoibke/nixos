@@ -90,6 +90,7 @@
 
   home.sessionPath = [
     "$HOME/.local/bin"
+    "$HOME/Applications"
   ];
 
   programs.zoxide = {
