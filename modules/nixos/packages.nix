@@ -38,6 +38,11 @@
     bibata-cursors
     papirus-icon-theme
 
+    # Wine
+    wine
+    winetricks
+    protontricks
+
     # Applications
     firefox
     kdePackages.gwenview
