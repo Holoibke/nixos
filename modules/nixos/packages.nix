@@ -31,6 +31,8 @@
     hyprshot
     nodejs
     mpd
+    zenity
+    fuse-overlayfs
 
     # Theme
     bibata-cursors
