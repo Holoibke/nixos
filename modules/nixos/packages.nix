@@ -63,6 +63,10 @@
     kdePackages.qtsvg
     kdePackages.kservice
     shared-mime-info
+
+     # Modding
+    (pkgs.callPackage ./packages/linux-mod-organizer.nix { inherit inputs; })
+
   ];
 
 # Fonts

@@ -37,6 +37,11 @@
       repo = "creamlinux-installer";
       flake = false;
     };
+    linux-mod-organizer = {
+      url = "git+https://codeberg.org/enoki/linux-mod-organizer";
+      flake = false;
+    };
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
