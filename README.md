@@ -1,1 +1,0 @@
-# Holibken's NixOS Configuration
