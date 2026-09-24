@@ -249,6 +249,22 @@
         "type": "github"
       }
     },
+    "linux-mod-organizer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787688506,
+        "narHash": "sha256-fwa+mQNT0EH5Yj8AVGF33hbOewV8tRA9TgPtMFsn86A=",
+        "ref": "refs/heads/master",
+        "rev": "377c53f81354ad1622743b66723c18224a9a754e",
+        "revCount": 905,
+        "type": "git",
+        "url": "https://codeberg.org/enoki/linux-mod-organizer"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/enoki/linux-mod-organizer"
+      }
+    },
     "millennium": {
       "inputs": {
         "millennium-src": "millennium-src",
@@ -589,6 +605,7 @@
         "affinity-nix": "affinity-nix",
         "creamlinux-installer": "creamlinux-installer",
         "home-manager": "home-manager",
+        "linux-mod-organizer": "linux-mod-organizer",
         "millennium": "millennium",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nixos-hardware": "nixos-hardware",

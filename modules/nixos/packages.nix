@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
+let
+  linux-mod-organizer = pkgs.callPackage ./packages/linux-mod-organizer.nix {
+    inherit inputs;
+  };
+in
 {
   environment.systemPackages = with pkgs; [
     # Core
@@ -43,6 +48,9 @@
     winetricks
     protontricks
 
+    # Modding
+    linux-mod-organizer
+
     # Applications
     firefox
     kdePackages.gwenview
@@ -63,10 +71,6 @@
     kdePackages.qtsvg
     kdePackages.kservice
     shared-mime-info
-
-     # Modding
-    (pkgs.callPackage ./packages/linux-mod-organizer.nix { inherit inputs; })
-
   ];
 
 # Fonts
