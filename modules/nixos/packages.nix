@@ -1,10 +1,5 @@
 { pkgs, inputs, ... }:
 
-let
-  linux-mod-organizer = pkgs.callPackage ./packages/linux-mod-organizer.nix {
-    inherit inputs;
-  };
-in
 {
   environment.systemPackages = with pkgs; [
     # Core
@@ -49,8 +44,6 @@ in
     protontricks
 
     # Modding
-    linux-mod-organizer
-
     # Applications
     firefox
     kdePackages.gwenview
