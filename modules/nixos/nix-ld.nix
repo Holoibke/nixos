@@ -42,5 +42,6 @@
     dotnet-sdk
     libice
     libsm
+    pkgsi686Linux.glibc
   ];
 }

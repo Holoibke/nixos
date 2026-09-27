@@ -28,6 +28,26 @@
         "type": "github"
       }
     },
+    "amethyst-mod-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790318812,
+        "narHash": "sha256-QnpzUkm+/3zivqbMoc0um63pAwMv3joeJVscuhMjj/w=",
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
+        "rev": "40f20f10885397f14630563988c47165b1e8feb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
+        "type": "github"
+      }
+    },
     "cachyos-kernel": {
       "flake": false,
       "locked": {
@@ -587,6 +607,7 @@
     "root": {
       "inputs": {
         "affinity-nix": "affinity-nix",
+        "amethyst-mod-manager": "amethyst-mod-manager",
         "creamlinux-installer": "creamlinux-installer",
         "home-manager": "home-manager",
         "millennium": "millennium",

@@ -44,6 +44,8 @@
     protontricks
 
     # Modding
+    inputs.amethyst-mod-manager.packages.${pkgs.system}.default
+
     # Applications
     firefox
     kdePackages.gwenview
