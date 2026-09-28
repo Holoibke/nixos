@@ -44,4 +44,8 @@
     libsm
     pkgsi686Linux.glibc
   ];
+  
+  systemd.tmpfiles.rules = [
+    "L+ /lib/ld-linux.so.2 - - - - ${pkgs.pkgsi686Linux.glibc}/lib/ld-linux.so.2"
+  ];
 }
