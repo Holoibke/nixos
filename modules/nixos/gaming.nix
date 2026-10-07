@@ -14,7 +14,7 @@
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
 
-    # package = pkgs.millennium-steam;
+    package = pkgs.millennium-steam;
 
     extraCompatPackages = with pkgs; [
       proton-ge-bin
