@@ -14,7 +14,7 @@
     unzip
     unrar
     mc
-    yazi
+    superfile
     _7zz
 
     # Utilities

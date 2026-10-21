@@ -13,6 +13,7 @@
       "git.confirmSync" = false;
       "explorer.confirmDelete" = false;
       "explorer.confirmDragAndDrop" =  false;
+      "workbench.colorTheme" = "NoctaliaTheme";
     };
   };
 }

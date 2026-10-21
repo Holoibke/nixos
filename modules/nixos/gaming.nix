@@ -7,14 +7,12 @@
 
   programs.steam = {
     enable = true;
-
+    package = pkgs.millennium-steam;
     extest.enable = true;
 
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
-
-    package = pkgs.millennium-steam;
 
     extraCompatPackages = with pkgs; [
       proton-ge-bin
