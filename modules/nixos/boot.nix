@@ -5,10 +5,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # CachyOS kernel zen4 version
+  # CachyOS kernel, built locally when no valid substitute exists
   nixpkgs.overlays = [
-    inputs.nix-cachyos-kernel.overlays.pinned
+    inputs.nix-cachyos-kernel.overlays.default
   ];
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
+
+  boot.kernelPackages =
+    pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
 
   # AMD CPU
   boot.kernelParams = [ "amd_pstate=active" ];

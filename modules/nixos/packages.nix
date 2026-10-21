@@ -15,7 +15,7 @@
     unrar
     mc
     superfile
-    _7zz
+    p7zip
 
     # Utilities
     wl-clipboard
@@ -33,6 +33,10 @@
     mpd
     zenity
     fuse-overlayfs
+    qbittorrent
+    unar
+    pavucontrol
+    gearlever
 
     # Theme
     bibata-cursors
@@ -66,6 +70,8 @@
     kdePackages.qtsvg
     kdePackages.kservice
     shared-mime-info
+
+    # python
   ];
 
 # Fonts

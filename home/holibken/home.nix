@@ -40,5 +40,6 @@
     rmpc
     mpd
     mailspring
+    obsidian
   ];
 }
